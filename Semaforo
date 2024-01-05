@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+ *{
+    margin: 20px 20px 20px 20px;
+
+    text font: arial
+
+ }
+
+ #topo{
+
+    width: 45%;
+ }
+
+ p{
+    font-size: 21px;
+
+ }
+
+ h1,h2{
+
+    color: rgb(203, 48, 48);
+ }
+
+ h1{
+    font-size: 58px;
+ }
+
+ h2{
+
+    font-size: 26px;
+ }
+
+ div{
+
+    border: 1px solid  rgb(203, 48, 48);
+
+    background-color:  rgb(203, 48, 48);
+    padding: 30px;
+    margin: 0px ;
+
+    font-size: 20px;
+
+    color: aliceblue;
+ }
+
+ button{
+
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 5%;
+ }
+
+ 
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+<body>
+    
+    <center>
+    <img src="topo.png" alt="" id="topo">
+    </center>
+   
+   <center>
+    <h1>Sinais de Trânsito que todo motorista precisa conhecer</h1>
+    </center>
+    <p>Segundo o art. 87 do Código de Trânsito Brasileiro (CTB), existem 6 tipos de sinais de trânsito: 
+        sinais verticais, sinais horizontais, sinaissemafóricos, sinais de obras, sinais sonoros e dispositivos auxiliares. 
+        Cada um tem sua importância e significado.</p>
+    
+    <h2>1 - Sinais verticais</h2>
+    
+    <p>Os sinais verticais são as placas postas nas laterais ou acima das vias de trânsito, que transmitem mensagens aos condutores. 
+        Essas mensagenspodem ser permanentes e variáveis.</p>
+    
+    <h2>2 - Sinais horizontais</h2>
+    
+    <p>Os sinais horizontais são as sinalizações pintadas nas vias públicas e particulares de trânsito. Essa sinalização pode ser em formato 
+        desímbolos ou faixas.</p>
+    
+    <h2>3 - Sinais semafóricos</h2>
+    
+    <p>Há dois tipos de sinais semafóricos (por vezes chamados de sinais luminosos), sendo semáforos de sinalização e semáforos de 
+        advertência.</p>
+    
+    <p>Os semáforos de sinalização são os mais comuns, é por eles que o fluxo de veículos e pedestres é controlado. É através do semáforo 
+        desinalização que ocorre a alteração de direito de passagem</p>
+    
+    <p>O semáforo de sinalização que controla o fluxo de automóveis é composto por três cores. Já o semáforo que controla o fluxo de 
+        pedestres écomposto por duas: verde e vermelho</p>
+    
+    <p>Os semáforos de advertência podem ser visto com mais frequência em estradas. Esses, por sua vez, têm a função de alertar os 
+        condutores sobre aexistência de obstáculos ou situações perigosas que precisem de atenção redobrada.</p>
+   
+        <center>
+
+    <img src="verde.png" alt="" id="semaforo">
+    </center>
+       <center> 
+        <button onclick="mudarsemaforo()" id="semaforo">Trocar de cor!</button>
+       </center> 
+
+
+    <h2>4 - Sinais de obras</h2>
+    
+    <p>Os sinais de obras no trânsito podem ser feitos por sinalização vertical, horizontal, semafórica, sonoros, por gestos e por 
+        dispositivosauxiliares que identifiquem o caráter temporário da obra naquela via.</p>
+    
+    <h2>5 - Sinais sonoros</h2>
+    
+    <p>Algumas pessoas confundem buzinas e sirenes como sinais sonoros, e apesar desses sons serem uma forma de se comunicar no trânsito, 
+        não é dissoque se trata o sinal sonoro</p>
+    
+    <p>O sinal sonoro é feito por apito usado por agentes de trânsito. Esse método é mais usado quando os semáforos deixam de funcionar, 
+        ou quando háalgum acidente na via.</p>
+    
+    <h2>6 - Dispositivos auxiliares</h2>
+    
+    <p>Dispositivos auxiliares são recursos físicos de diferentes cores, tamanhos e formatos, colocados nas vias e em obstáculos 
+        que estejaminterferindo no fluxo de veículos.</p>
+    
+    <p>Os dispositivos auxiliares, diferentes das outras sinalizações de trânsito, não têm uma forma padrão e por vezes podem ser de uso 
+        temporário.Os cones, por exemplo, são dispositivos auxiliares e são usados apenas quando a necessidade realmente existe.</p>
+    
+        <center>
+        <div>Desenvolvimento Web Básico - 2023</div>  
+</center>
+
+    
+<script>
+    let imagenssemaforo = [     
+        
+        "amarelo.png",
+        "verde.png",
+        "vermelho.png"
+
+];
+
+let x = 0;
+
+
+function mudarsemaforo() {
+            
+            x = (x + 1) % imagenssemaforo.length;
+
+            let semaforo = document.getElementById("semaforo");
+
+          
+            semaforo.src = imagenssemaforo[x];
+        }
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
